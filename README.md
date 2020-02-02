@@ -15,7 +15,7 @@ Shock Detection Module for Arduino Uno.
 Detects sudden changes in movement caused by shock. It gauges fall acceleration and angle of fall to determine whether someone has fallen and needs to send a distress signal after a short delay. The distress signal consists of a loud, obnoxious alert noise, alongside a blue LED and an alternating red LED. 
 
 ## Changelog
-* 2/1/2020
+* February 1st, 2020
   * Implemented accelerometer and gyroscope functionality using MPU-6050.
   * Programmed sound buzzer with alternating note tone.
   * Simplified the circuit using shorter electrical wires.
@@ -27,4 +27,4 @@ Detects sudden changes in movement caused by shock. It gauges fall acceleration 
 ## Images
 
 ## Possible extensions
-1. The Bluetooth functionality is yet to be implemented.
+1. Bluetooth connectivity to interface with a phone or a similar nearby device, which could then be utilized to make phone calls to helpful sources like 911.
