@@ -82,6 +82,7 @@ void loop(){
     } else if (trigger1Count >= 5) {
       trigger1 = false; 
       trigger1Count = 0;
+      trigger0 = true;
       Serial.println("TRIGGER 1 DEACTIVATED");
     }
   } else if (trigger2) {
@@ -95,6 +96,7 @@ void loop(){
     } else if (trigger2Count > 5) { // allow 0.5s for orientation change
       trigger2 = false; 
       trigger2Count = 0;
+      trigger0 = true;
       Serial.println("TRIGGER 2 DEACTIVATED");
       }
   } else if (trigger3) {
@@ -110,6 +112,7 @@ void loop(){
       } else { // user regained normal orientation
         trigger3 = false; 
         trigger3Count = 0;
+        trigger0 = true;
         Serial.println("TRIGGER 3 DEACTIVATED");
       }
     }
@@ -119,6 +122,7 @@ void loop(){
     delay(50);
     digitalWrite(11, LOW);
     fall = false;
+    trigger0 = true;
   }
   
   //It appears that delay is needed in order not to clog the port
