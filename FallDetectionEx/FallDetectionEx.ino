@@ -35,6 +35,11 @@ void setup() {
   pinMode(SOUND, OUTPUT);
   pinMode(LED, OUTPUT);
   digitalWrite(LED, LOW);
+
+  pinMode(5, OUTPUT);
+  digitalWrite(5, LOW);
+  pinMode(7, OUTPUT);
+  digitalWrite(7, LOW);
   
   Serial.begin(9600);
 }
@@ -123,9 +128,13 @@ void loop(){
     Serial.println("FALL DETECTED");
     for (int i = 0; i < 5; i++) {
       tone(SOUND, 1175);
+      digitalWrite(5, HIGH);
       delay(600);
+      digitalWrite(5, LOW);
+      digitalWrite(7, HIGH);
       tone(SOUND, 880);
       delay(600);
+      digitalWrite(7, LOW);
     }
     noTone(SOUND);
     fall = false;
