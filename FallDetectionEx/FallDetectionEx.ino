@@ -1,3 +1,5 @@
+#define SOUND 6
+#define LED 11
 #include <Wire.h>
 const int MPU_addr = 0x68;  // I2C address of the MPU-6050
 int16_t AcX, AcY, AcZ, Tmp, GyX, GyY, GyZ;
@@ -30,9 +32,9 @@ void setup() {
 //  Serial.print("Average of AcY: " + (String) avgAcY + "\n");
 //  Serial.println("Average of AcZ: " + (String) avgAcZ + "\n");
 
-  pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
-  digitalWrite(11, LOW);
+  pinMode(SOUND, OUTPUT);
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
   
   Serial.begin(9600);
 }
@@ -120,11 +122,12 @@ void loop(){
   } else if (fall) {
     Serial.println("FALL DETECTED");
     for (int i = 0; i < 5; i++) {
-      tone(10,1175);
+      tone(SOUND, 1175);
       delay(600);
-      tone(10,880);
+      tone(SOUND, 880);
       delay(600);
     }
+    noTone(SOUND);
     fall = false;
     trigger0 = true;
   }
