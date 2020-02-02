@@ -24,6 +24,17 @@ Detects sudden changes in movement caused by shock. It gauges fall acceleration 
 ## Known bugs
 
 ## Images
+![1](images/1.jpg)
+
+![2](images/2.jpg)
+
+![3](images/3.jpg)
+
+![4](images/4.jpg)
+
+![5](images/5.jpg)
+
+![6](images/6.png)
 
 ## Possible extensions
 1. Bluetooth connectivity to interface with a phone or a similar nearby device, which could then be utilized to make phone calls to helpful sources like 911.
