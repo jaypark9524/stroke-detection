@@ -29,7 +29,8 @@ void setup() {
 //  Serial.print("Average of AcX: " + (String) avgAcX + "\n");
 //  Serial.print("Average of AcY: " + (String) avgAcY + "\n");
 //  Serial.println("Average of AcZ: " + (String) avgAcZ + "\n");
-  
+
+  pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
   digitalWrite(11, LOW);
   
@@ -118,9 +119,12 @@ void loop(){
     }
   } else if (fall) {
     Serial.println("FALL DETECTED");
-    digitalWrite(11, HIGH);
-    delay(50);
-    digitalWrite(11, LOW);
+    for (int i = 0; i < 5; i++) {
+      tone(10,1175);
+      delay(600);
+      tone(10,880);
+      delay(600);
+    }
     fall = false;
     trigger0 = true;
   }
