@@ -2,7 +2,9 @@
 Shock Detection Module for Arduino Uno.
 
 ## Demo Video
-https://www.youtube.com/watch?v=MOOXCn93uBI&feature=youtu.be
+
+
+[![Video](http://img.youtube.com/vi/MOOXCn93uBI/0.jpg)](http://www.youtube.com/watch?v=MOOXCn93uBI "Shock Detection Module")
 
 ## Materials used
 * Arduino Uno
